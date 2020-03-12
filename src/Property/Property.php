@@ -71,8 +71,9 @@ class Property
             foreach ($value as $potentialDto) {
                 if ($potentialDto instanceof DataTransferObject) {
                     $potentialDto->disableValidation();
-                    $values[] = $potentialDto;
                 }
+
+                $values[] = $potentialDto;
             }
 
             return $values;
